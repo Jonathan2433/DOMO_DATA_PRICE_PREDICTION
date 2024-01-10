@@ -1,0 +1,14 @@
+name: EXPLO_DVF
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - matplotlib
+  - jupyter
+  - seaborn
+  - numpy
+  - pandas
+  - ipykernel
+  - plotly
+
+
