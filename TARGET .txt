@@ -1,0 +1,42 @@
+TARGET :
+PRIX DE VENTES
+
+QUESTION : 
+Qu'est ce qui influence notre prix de vente ????
+
+HYPOTHESES : 
+
+-- DATE DE VENTE IMPORTANTE
+-- TYPE DE BIEN IMPORTANT
+-- TERRAIN OU NON IMPORTANT
+-- SURFACE DE TERRAIN IMPORTANT
+-- SURFACE REEL BATI IMPORTANT ++++
+-- SURFACE CARREZ IMPORTANT ++++
+
+
+NOMBRE DE PIECE PRINCIPALE
+NATURE DE CULTURE 
+NATURE DE CULTURE SPECIALE
+
+ADRESSE (CODETYPE VOIE)
+
+
+
+
+POUR LE ML POUR LA GEOLOC JE VAIS M'APUYER SUR CODETYPE VOIE
+
+!!!!!!!! 
+PENSE A CHANGER LES CODES TYPE VOIE AVEC UNE LETTRE PAR UN NUMERO QUI N'EST PAS ATTRIBUE 
+!!!!!!!!
+
+
+Next steps : 
+
+Nettoyer les Outliers
+Normaliser nos données 
+supprimer les features inutiles
+Features engineering (si encore besoins)
+Entrainer une baseline 
+trouver un modèle adapté 
+entrainer le modèle
+
