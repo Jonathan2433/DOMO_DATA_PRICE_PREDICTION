@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
-    <option name="sdkName" value="C:\ProgramData\miniconda3" />
+    <option name="sdkName" value="EXPLO_DVF" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="EXPLO_DVF" project-jdk-type="Python SDK" />
-  <component name="PyCharmDSProjectLayout">
-    <option name="id" value="JupyterRightHiddenStructureLayout" />
-  </component>
 </project>

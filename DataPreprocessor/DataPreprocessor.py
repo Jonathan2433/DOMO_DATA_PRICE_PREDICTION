@@ -44,7 +44,7 @@ class DataPreprocessor(BaseEstimator, TransformerMixin):
 
     def _convert_columns(self, X):
         date_col_index = 1  # Indice de la colonne de dates
-        cols_to_convert = [2, 3, 16, 18, 20, 22, 24, 26, 27, 28, 31]  # Exemple d'indices de colonnes à convertir
+        cols_to_convert = [0, 3, 16, 18, 20, 22, 24, 26, 27, 28, 31]  # Exemple d'indices de colonnes à convertir
         for col_idx in cols_to_convert:
             # Remplacer 'NULL' par np.nan
             column = np.where(X[:, col_idx] == 'NULL', np.nan, X[:, col_idx])
@@ -66,37 +66,34 @@ class DataPreprocessor(BaseEstimator, TransformerMixin):
         return X
 
     def _fill_na(self, X):
-        fill_zero_col_indices = [2, 3, 31, 16, 18, 20, 22, 24, 26, 27, 28]  # Ajustez selon vos colonnes
+        fill_zero_col_indices = [1, 3, 4, 5]  # Ajustez selon vos colonnes
 
         # Convertir les colonnes en flottant sauf la colonne de dates
         for col_idx in fill_zero_col_indices:
-            # Remplacer 'NULL' par np.nan
-            X[:, col_idx] = np.where(np.logical_or(X[:, col_idx] == 'NULL', X[:, col_idx] == 'NaN'), np.nan, X[:, col_idx])
             # Remplacer les virgules par des points et essayer de convertir en float
             X[:, col_idx] = np.char.replace(X[:, col_idx].astype(str), ',', '.').astype(float)
-            # Remplacer np.nan par 0
-            X[:, col_idx] = np.nan_to_num(X[:, col_idx], nan=0.0)  # Utiliser np.nan_to_num pour remplacer np.nan par 0
-        return X
-
-    def feature_engineering(self, X):
-        # Création de la colonne 'SurfaceCarrez'
-        surface_carrez_columns = X[:, [16, 18, 20, 22, 24]]  # Indices des colonnes SurfaceCarrez1erLot, SurfaceCarrez2emeLot, etc.
-        surface_carrez_columns[surface_carrez_columns == 'NULL'] = 0  # Remplace 'NULL' par 0
-        surface_carrez_columns = surface_carrez_columns.astype(float)  # Convertit en flottant
-        surface_carrez = np.sum(surface_carrez_columns, axis=1)  # Somme des surfaces par lot
-        X = np.column_stack((X, surface_carrez))  # Ajout de la nouvelle colonne 'SurfaceCarrez'
-
-        # Suppression des colonnes SurfaceCarrez1erLot, SurfaceCarrez2emeLot, etc.
-        X = np.delete(X, [16, 18, 20, 22, 24], axis=1)
 
         return X
+
+    # def feature_engineering(self, X):
+    #     # Création de la colonne 'SurfaceCarrez'
+    #     surface_carrez_columns = X[:, [16, 18, 20, 22, 24]]  # Indices des colonnes SurfaceCarrez1erLot, SurfaceCarrez2emeLot, etc.
+    #     surface_carrez_columns[surface_carrez_columns == 'NULL'] = 0  # Remplace 'NULL' par 0
+    #     surface_carrez_columns = surface_carrez_columns.astype(float)  # Convertit en flottant
+    #     surface_carrez = np.sum(surface_carrez_columns, axis=1)  # Somme des surfaces par lot
+    #     X = np.column_stack((X, surface_carrez))  # Ajout de la nouvelle colonne 'SurfaceCarrez'
+    #
+    #     # Suppression des colonnes SurfaceCarrez1erLot, SurfaceCarrez2emeLot, etc.
+    #     X = np.delete(X, [16, 18, 20, 22, 24], axis=1)
+    #
+    #     return X
 
     def _handle_outliers(self, X):
         # Indices ajustés pour les colonnes après toutes les transformations précédentes
-        valeur_fonciere_index = 2
-        surface_bati_index = 22
-        surface_carrez_index = 27  # Supposé être la dernière colonne après feature_engineering
-        nombre_pieces_index = 23
+        valeur_fonciere_index = 1
+        surface_bati_index = 4
+        surface_carrez_index = 5  # Supposé être la dernière colonne après feature_engineering
+        nombre_pieces_index = 7
 
         # Initialisation de la liste pour collecter tous les indices des outliers
         all_outliers_indices = []
@@ -157,18 +154,9 @@ class DataPreprocessor(BaseEstimator, TransformerMixin):
 
     def _prepare_final_dataset(self, X):
         # Prépare le dataset final en excluant certaines colonnes et en gérant les valeurs manquantes
-        col_indices_to_keep = [1, 2, 8, 21, 22, 23, 26, 27]  # Indices des colonnes à conserver
+        col_indices_to_keep = [0, 1, 3, 4, 5, 6, 7, 8, 9]  # Indices des colonnes à conserver
         df = X[:, col_indices_to_keep]
 
-        # Convertir les colonnes nécessaires en float
-        surface_bati_index = 3  # Indice de la colonne SurfaceReelleBati
-        valeur_fonciere_index = 1  # Indice de la colonne ValeurFonciere
-        df[:, surface_bati_index] = df[:, surface_bati_index].astype(float)
-        df[:, valeur_fonciere_index] = df[:, valeur_fonciere_index].astype(float)
-
-        # Suppression des lignes avec des valeurs manquantes dans certaines colonnes
-        mask = (df[:, surface_bati_index] != 0) & (df[:, valeur_fonciere_index] != 0)
-        df = df[mask]
 
         return df
 
