@@ -1,2 +1,4 @@
 /DATA
 *.csv
+/MODELS/
+*.pkl

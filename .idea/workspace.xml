@@ -5,23 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f17e69a-8b4c-4a33-b3d3-e68c2b000fb6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/00_EXPLO_DVF.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataPreprocessor/DataPreprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataPreprocessor/DataPreprocessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTEBOOKS/00_DATA_ANALYSE_OF_PRICES.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NOTEBOOKS/00_DATA_ANALYSE_OF_PRICES.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTEBOOKS/01_DATA_ANALYSE_OF_OUTLIERS.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NOTEBOOKS/01_DATA_ANALYSE_OF_OUTLIERS.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTEBOOKS/02_DATA_ANALYSE_OF_PRICES_WHITOUT_OUTLIERS.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NOTEBOOKS/02_DATA_ANALYSE_OF_PRICES_WHITOUT_OUTLIERS.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTEBOOKS/03_BASELINE.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NOTEBOOKS/03_BASELINE.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTEBOOKS/PREPROCESSING.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NOTEBOOKS/PREPROCESSING.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/test.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BASELINE.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,7 +41,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -59,10 +61,18 @@
       <workItem from="1713519017715" duration="50000" />
       <workItem from="1713519074855" duration="5819000" />
       <workItem from="1713715194815" duration="5838000" />
+      <workItem from="1713898010428" duration="738000" />
+      <workItem from="1713975100541" duration="170000" />
+      <workItem from="1714131497689" duration="4958000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$api_test.coverage" NAME="api_test Coverage Results" MODIFIED="1714134215974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$BASELINE.coverage" NAME="BASELINE Coverage Results" MODIFIED="1714133076025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$model.coverage" NAME="model Coverage Results" MODIFIED="1714136528402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
