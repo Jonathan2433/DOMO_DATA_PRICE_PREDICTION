@@ -40,3 +40,5 @@ Entrainer une baseline
 trouver un modèle adapté 
 entrainer le modèle
 
+
+pip list --format=freeze > requirements.txt
