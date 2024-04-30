@@ -33,7 +33,7 @@ for col in [0, 2, 3, 4]:
 print("Conversion des , en . faites")
 
 # Définition des colonnes numériques et catégorielles par leurs indices
-numeric_features = [0, 2, 3, 4]  # indices des colonnes numériques
+numeric_features = [0, 1, 2, 3, 4]  # indices des colonnes numériques
 categorical_features = [5, 6]  # indices des deux dernières colonnes
 
 print("début de la Pipeline de prétraitement pour les caractéristiques numériques")
@@ -70,17 +70,17 @@ y = data[0]  # Utilisation de la colonne index 0 comme cible
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-print("début d'Entraînement du modèle'")
+print("début d'Entraînement du modèle")
 # Entraînement du modèle GBM
 gbm_model.fit(X_train, y_train)
 print("Fin d'Entraînement du modèle")
 
+# Paramètres à tester
 param_grid = {
-    'regressor__n_estimators': [200, 300, 400],
-    'regressor__learning_rate': [0.1, 0.15, 0.2, 0.25],
-    'regressor__max_depth': [7, 9, 11],
-    'regressor__min_samples_split': [2, 4, 6],
-    'regressor__min_samples_leaf': [1, 2, 3]
+    'regressor__n_estimators': [100, 200],
+    'regressor__learning_rate': [0.05, 0.1, 0.2],
+    'regressor__max_depth': [3, 5, 7],
+    'regressor__min_samples_split': [2, 4]
 }
 
 # Création du GridSearchCV
