@@ -12,8 +12,8 @@ COPY ./requirements.txt /code/requirements.txt
 COPY main.py ./
 COPY app ./app
 
-# Copie le fichier du modèle dans le répertoire de travail du conteneur
-COPY ./MODELS/BASELINE/RF_REGRESSOR_BASELINE_20240426_141536.pkl /code/MODELS/BASELINE/
+# Copie le nouveau modèle GBM dans le répertoire de travail du conteneur
+COPY ./MODELS/RF_RANDOM_SEARCH_20240516_102902.pkl /code/MODELS/
 
 
 # Installe les dépendances

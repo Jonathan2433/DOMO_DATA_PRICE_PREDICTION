@@ -18,7 +18,7 @@ class PredictionRequest(BaseModel):
 
 
 # Chargement du modèle RandomForest
-with open('./MODELS/BASELINE/RF_REGRESSOR_BASELINE_20240426_141536.pkl', 'rb') as f:
+with open('./MODELS/RF_RANDOM_SEARCH_20240516_102902.pkl', 'rb') as f:
     model = pickle.load(f)
 
 

@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f17e69a-8b4c-4a33-b3d3-e68c2b000fb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GBR_GRID_SEARCH.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GBR_RANDOMSEARCH.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTEBOOKS/LazyPredict.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RANDOM_FOREST_GRID_SEARCH.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RANDOM_FOREST_RANDOM_SEARCH.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ML_TEST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RANDOM_FOREST_RANDOM_SEARCH.py" beforeDir="false" afterPath="$PROJECT_DIR$/RANDOM_FOREST_RANDOM_SEARCH.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,11 @@
       <workItem from="1714331349197" duration="39000" />
       <workItem from="1714413951439" duration="7048000" />
       <workItem from="1714502940224" duration="654000" />
-      <workItem from="1714506414756" duration="4249000" />
+      <workItem from="1714506414756" duration="5047000" />
+      <workItem from="1714561926609" duration="5183000" />
+      <workItem from="1714634008833" duration="1477000" />
+      <workItem from="1715844965017" duration="7347000" />
+      <workItem from="1716363419866" duration="295000" />
     </task>
     <servers />
   </component>
@@ -84,10 +87,11 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/01_DOMODATA_ML$GBR_GRID_SEARCH.coverage" NAME="GBR_GRID_SEARCH Coverage Results" MODIFIED="1714417248875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$api_test.coverage" NAME="api_test Coverage Results" MODIFIED="1714419443258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$RANDOM_FOREST_GRID_SEARCH.coverage" NAME="RANDOM_FOREST_GRID_SEARCH Coverage Results" MODIFIED="1714417484777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$RANDOM_FOREST_RANDOM_SEARCH.coverage" NAME="RANDOM_FOREST_RANDOM_SEARCH Coverage Results" MODIFIED="1714508192252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$GBR_RANDOMSEARCH.coverage" NAME="GBR_RANDOMSEARCH Coverage Results" MODIFIED="1714508184944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$ML_TEST.coverage" NAME="ML_TEST Coverage Results" MODIFIED="1714634043422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$api_test.coverage" NAME="api_test Coverage Results" MODIFIED="1715851302008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$RANDOM_FOREST_GRID_SEARCH.coverage" NAME="RANDOM_FOREST_GRID_SEARCH Coverage Results" MODIFIED="1715849401853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$RANDOM_FOREST_RANDOM_SEARCH.coverage" NAME="RANDOM_FOREST_RANDOM_SEARCH Coverage Results" MODIFIED="1715850225377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/01_DOMODATA_ML$GBR_RANDOMSEARCH.coverage" NAME="GBR_RANDOMSEARCH Coverage Results" MODIFIED="1714561964556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/01_DOMODATA_ML$BASELINE.coverage" NAME="BASELINE Coverage Results" MODIFIED="1714133076025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/01_DOMODATA_ML$model.coverage" NAME="model Coverage Results" MODIFIED="1714415109717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

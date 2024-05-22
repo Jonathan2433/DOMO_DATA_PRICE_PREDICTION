@@ -9,6 +9,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import numpy as np
 import datetime
 import time
+import pickle
 
 # Début du comptage du temps
 start_time = time.time()
@@ -91,6 +92,7 @@ datetime_str = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
 file_datetime_str = current_datetime.strftime("%Y%m%d_%H%M%S")
 log_file_path = f'./MODELS/LOG/training_log_{file_datetime_str}.txt'
 
+model_path = f'./MODELS/RF_RANDOM_SEARCH_{file_datetime_str}.pkl'
 with open(log_file_path, 'w') as file:
     file.write(f"Training Date and Time: {datetime_str}\n")
     file.write(f"Model Trained: RandomForestRegressor RANDOM SEARCH\n")
@@ -100,3 +102,6 @@ with open(log_file_path, 'w') as file:
     file.write(f"Mean Absolute Error: {mae}\n")
     file.write(f"R-squared: {r2}\n")
     file.write(f"Training Duration: {training_duration_str}\n\n")
+
+with open(model_path, 'wb') as file:
+    pickle.dump(best_model, file)
