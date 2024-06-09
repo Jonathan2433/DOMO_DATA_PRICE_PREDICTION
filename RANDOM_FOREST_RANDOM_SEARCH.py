@@ -69,6 +69,16 @@ y = data['Prix']  # Utilisation de la colonne 'Prix' comme cible
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 print(f"Training data shape: {X_train.shape}, Test data shape: {X_test.shape}")
 
+# Afficher les données avant transformation
+print("Data before transformation:")
+print(X_train.head())
+
+# Transformer les données
+print_time("Transforming data", start_time)
+X_train_transformed = pipeline.named_steps['preprocessor'].fit_transform(X_train)
+print("Data after transformation:")
+print(X_train_transformed[:5])  # Afficher les 5 premières lignes des données transformées
+
 # Paramètres pour RandomizedSearchCV
 print_time("Setting up RandomizedSearchCV parameters", start_time)
 param_dist = {

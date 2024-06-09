@@ -13,7 +13,7 @@ COPY main.py ./
 COPY app ./app
 
 # Copie le nouveau modèle GBM dans le répertoire de travail du conteneur
-COPY ./MODELS/RF_RANDOM_SEARCH_20240609_185907.pkl /code/MODELS/
+COPY ./MODELS/RF_RANDOM_SEARCH_20240609_201517.pkl /code/MODELS/
 
 
 # Installe les dépendances

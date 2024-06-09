@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import pickle
 import numpy as np
+import pandas as pd
 
 app = FastAPI()
 
@@ -18,17 +19,18 @@ class PredictionRequest(BaseModel):
 
 
 # Chargement du modèle RandomForest
-with open('./MODELS/RF_RANDOM_SEARCH_20240609_185907.pkl', 'rb') as f:
+with open('./MODELS/RF_RANDOM_SEARCH_20240609_201517.pkl', 'rb') as f:
     model = pickle.load(f)
 
 
 # Endpoint pour faire des prédictions
 @app.post("/predict/")
 async def predict(request: PredictionRequest):
-    # Transformation des données en format attendu par le modèle
-    input_data = np.array([[request.annee, request.surface_terrain, request.surface_bati,
-                            request.surface_carrez, request.nombre_de_piece, request.code_postal,
-                            request.type_de_bien]])
+    # Transformation des données en DataFrame
+    input_data = pd.DataFrame([request.dict()])
+    input_data.columns = ['DT_Annee', 'SurfaceTerrain', 'SurfaceBati', 'SurfaceCarrez', 'NombrePiecesPrincipales',
+                          'CodePostal', 'TypeLocalName']
+
     # Prédiction
     prediction = model.predict(input_data)
 
