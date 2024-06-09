@@ -15,25 +15,23 @@ import time
 start_time = time.time()
 
 # Chargement des données sans en-tête
-data_path = './DATA/IN/extract_gold_dvf_11_04_24_true_gold.csv'
-data = pd.read_csv(data_path, header=None, sep=';')
+data_path = './DATA/IN/DATA_GOLD_FOR_ML.csv'
+data = pd.read_csv(data_path, sep=';', low_memory=False)
 
 print(f"Original data shape: {data.shape}")  # Imprimer la forme originale des données
-data.drop(data.columns[[6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17]], axis=1, inplace=True)
-print(f"Data shape after column drop: {data.shape}")  # Imprimer la forme des données après la suppression
 
-# Extraire l'année de la colonne index 1
-data[1] = pd.to_datetime(data[1]).dt.year
-print("date extraite")
+# Afficher les noms des colonnes
+print("Columns:", data.columns)
 
-# Remplacement des virgules par des points et conversion en float pour les colonnes index 0, 2, 3, 4
-for col in [0, 2, 3, 4]:
+# Remplacement des virgules par des points et conversion en float pour les colonnes numériques
+numeric_cols = ['Prix', 'SurfaceTerrain', 'SurfaceBati', 'SurfaceCarrez']
+for col in numeric_cols:
     data[col] = data[col].astype(str).str.replace(',', '.').astype(float)
 print("Conversion des , en . faites")
 
-# Définition des colonnes numériques et catégorielles par leurs indices
-numeric_features = [0, 2, 3, 4]  # indices des colonnes numériques
-categorical_features = [5, 6]  # indices des deux dernières colonnes
+# Définition des colonnes numériques et catégorielles par leurs noms
+numeric_features = ['SurfaceTerrain', 'SurfaceBati', 'SurfaceCarrez', 'NombrePiecesPrincipales']
+categorical_features = ['DT_Annee', 'CodePostal', 'TypeLocalName']
 
 print("début de la Pipeline de prétraitement pour les caractéristiques numériques")
 # Pipeline de prétraitement pour les caractéristiques numériques
@@ -64,8 +62,8 @@ model = Pipeline(steps=[('preprocessor', preprocessor),
 print("fin du pipeline complet avec RandomForestRegressor")
 
 # Séparation des données
-X = data.drop(0, axis=1)  # Suppression de la colonne index 0 (price)
-y = data[0]  # Utilisation de la colonne index 0 comme cible
+X = data.drop('Prix', axis=1)  # Suppression de la colonne 'Prix'
+y = data['Prix']  # Utilisation de la colonne 'Prix' comme cible
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
